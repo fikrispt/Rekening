@@ -1,60 +1,184 @@
-<!-- simpan sebagai rekening.html dan buka di browser -->
 <!doctype html>
 <html lang="id">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Rekening — Fixs</title>
-  <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0;background:#fff;color:#111;display:flex;align-items:center;justify-content:center;min-height:100vh}
-    .card{width:320px;padding:28px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.06);text-align:center}
-    h1{font-size:18px;margin:0 0 14px}
-    p.sub{color:#666;margin:0 0 18px;font-size:13px}
-    .btn{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-radius:10px;border:1px solid #eee;margin-bottom:10px;cursor:pointer;background:#fafafa}
-    .btn:hover{box-shadow:0 2px 8px rgba(0,0,0,0.04)}
-    .bank{font-weight:600}
-    .small{font-size:13px;color:#666}
-    .copied{font-size:12px;color:green;margin-top:8px;display:none}
-  </style>
+  <title>Fikri Saputra — Rekening</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Daftar nomor rekening & e-wallet Fikri Saputra — cepat disalin." />
 </head>
 <body>
-  <div class="card">
-    <h1>Transfer / Salin Rekening</h1>
-    <p class="sub">Pilih bank, tap untuk menyalin nomor rekening.</p>
+  <main class="page">
+    <!-- Background gradient -->
+    <div class="bg-outer"></div>
 
-    <div class="btn" data-acc="BCA • 1234567890">
-      <div>
-        <div class="bank">BCA</div>
-        <div class="small">Nama: Ryce — 1234</div>
+    <section class="card-wrapper">
+      <div class="card">
+        <!-- Cover -->
+        <div class="cover">
+          <!-- Ganti file di assets/cover.jpg dengan cover/sampul yang kamu kirim -->
+          <img src="assets/cover.jpg" alt="Sampul" class="cover-img" />
+        </div>
+
+        <!-- Profile circle overlaps cover -->
+        <div class="profile">
+          <!-- Ganti file di assets/s.jpeg dengan foto profil kamu -->
+          <img src="assets/s.jpeg" alt="Foto profil Fikri Saputra" class="profile-img" />
+        </div>
+
+        <div class="content">
+          <h1 class="name">Fikri Saputra</h1>
+          <p class="subtitle">Personal · Pembayaran · Kontak</p>
+
+          <div class="list">
+            <!-- BCA -->
+            <div class="item">
+              <div class="left">
+                <svg class="icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                  <rect width="24" height="24" rx="5" fill="#0a58ca"/>
+                </svg>
+                <div class="meta">
+                  <div class="title">BCA</div>
+                  <div class="desc">Fikri Saputra</div>
+                </div>
+              </div>
+              <div class="right">
+                <div class="value" id="bca">0512463850</div>
+                <button class="btn-copy" data-copy="0512463850" aria-label="Salin BCA">Salin</button>
+              </div>
+            </div>
+
+            <!-- Blu BCA -->
+            <div class="item">
+              <div class="left">
+                <svg class="icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                  <rect width="24" height="24" rx="5" fill="#17529b"/>
+                </svg>
+                <div class="meta">
+                  <div class="title">Blu BCA</div>
+                  <div class="desc">Fikri Saputra</div>
+                </div>
+              </div>
+              <div class="right">
+                <div class="value" id="blubca">004698348466</div>
+                <button class="btn-copy" data-copy="004698348466" aria-label="Salin Blu BCA">Salin</button>
+              </div>
+            </div>
+
+            <!-- BNI -->
+            <div class="item">
+              <div class="left">
+                <svg class="icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                  <rect width="24" height="24" rx="5" fill="#003a95"/>
+                </svg>
+                <div class="meta">
+                  <div class="title">BNI</div>
+                  <div class="desc">Fikri Saputra</div>
+                </div>
+              </div>
+              <div class="right">
+                <div class="value" id="bni">0843948944</div>
+                <button class="btn-copy" data-copy="0843948944" aria-label="Salin BNI">Salin</button>
+              </div>
+            </div>
+
+            <!-- BTN Syariah -->
+            <div class="item">
+              <div class="left">
+                <svg class="icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                  <rect width="24" height="24" rx="5" fill="#0f4c81"/>
+                </svg>
+                <div class="meta">
+                  <div class="title">BTN Syariah</div>
+                  <div class="desc">Fikri Saputra</div>
+                </div>
+              </div>
+              <div class="right">
+                <div class="value" id="btn">2003497836</div>
+                <button class="btn-copy" data-copy="2003497836" aria-label="Salin BTN Syariah">Salin</button>
+              </div>
+            </div>
+
+            <!-- SeaBank -->
+            <div class="item">
+              <div class="left">
+                <svg class="icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                  <rect width="24" height="24" rx="5" fill="#0076c2"/>
+                </svg>
+                <div class="meta">
+                  <div class="title">SeaBank</div>
+                  <div class="desc">Fikri Saputra</div>
+                </div>
+              </div>
+              <div class="right">
+                <div class="value" id="seabank">901069371035</div>
+                <button class="btn-copy" data-copy="901069371035" aria-label="Salin SeaBank">Salin</button>
+              </div>
+            </div>
+
+            <!-- DANA -->
+            <div class="item">
+              <div class="left">
+                <svg class="icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                  <rect width="24" height="24" rx="5" fill="#0070d2"/>
+                </svg>
+                <div class="meta">
+                  <div class="title">DANA</div>
+                  <div class="desc">Fikri Saputra</div>
+                </div>
+              </div>
+              <div class="right">
+                <div class="value" id="dana">08980332737</div>
+                <button class="btn-copy" data-copy="08980332737" aria-label="Salin DANA">Salin</button>
+              </div>
+            </div>
+
+            <!-- Gopay -->
+            <div class="item">
+              <div class="left">
+                <svg class="icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                  <rect width="24" height="24" rx="5" fill="#00a650"/>
+                </svg>
+                <div class="meta">
+                  <div class="title">Gopay</div>
+                  <div class="desc">Fikri Saputra</div>
+                </div>
+              </div>
+              <div class="right">
+                <div class="value" id="gopay">08980332737</div>
+                <button class="btn-copy" data-copy="08980332737" aria-label="Salin Gopay">Salin</button>
+              </div>
+            </div>
+
+            <!-- PayPal -->
+            <div class="item">
+              <div class="left">
+                <svg class="icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                  <rect width="24" height="24" rx="5" fill="#003087"/>
+                </svg>
+                <div class="meta">
+                  <div class="title">PayPal</div>
+                  <div class="desc">Fikri Saputra</div>
+                </div>
+              </div>
+              <div class="right">
+                <div class="value link" id="paypal"><a href="https://www.paypal.me/fikrispt" target="_blank" rel="noopener">paypal.me/fikrispt</a></div>
+                <button class="btn-copy" data-copy="https://www.paypal.me/fikrispt" aria-label="Salin PayPal">Salin</button>
+              </div>
+            </div>
+
+          </div>
+
+          <p class="hint">Klik "Salin" untuk menyalin nomor/link. Tombol membuka PayPal di tab baru jika diklik pada link.</p>
+
+        </div>
       </div>
-      <div>Salin</div>
-    </div>
+    </section>
 
-    <div class="btn" data-acc="BNI • 0987654321">
-      <div>
-        <div class="bank">BNI</div>
-        <div class="small">Nama: Ryce — 4321</div>
-      </div>
-      <div>Salin</div>
-    </div>
+    <!-- Toast -->
+    <div id="toast" class="toast" role="status" aria-live="polite">Disalin!</div>
+  </main>
 
-    <div id="copied" class="copied">Nomor tersalin ke clipboard ✅</div>
-  </div>
-
-  <script>
-    document.querySelectorAll('.btn').forEach(btn=>{
-      btn.addEventListener('click', async ()=>{
-        try{
-          const text = btn.getAttribute('data-acc');
-          await navigator.clipboard.writeText(text);
-          const el = document.getElementById('copied');
-          el.style.display = 'block';
-          setTimeout(()=>el.style.display='none',1600);
-        }catch(e){
-          alert('Clipboard tidak tersedia — coba manual: ' + btn.getAttribute('data-acc'));
-        }
-      });
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
