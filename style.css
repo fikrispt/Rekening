@@ -46,17 +46,17 @@ body{
 
 /* profile circle */
 .profile{
-  position:absolute; left:50%; transform:translateX(-50%); top:70px;
+  position:absolute; left:50%; transform:translateX(-50%); top:80px;
   width:110px; height:110px; border-radius:50%;
   padding:6px; background:linear-gradient(135deg,#fff5 0%,#fff0 70%);
   box-shadow:0 6px 18px rgba(2,6,23,0.6);
 }
-.profile-img{width:100%; height:100%; object-fit:cover; border-radius:50%; border:4px solid rgba(6,9,18,0.5);}
+.profile-img{width:100%; height:100%; object-fit:cover; border-radius:50%; border:2px solid rgba(6,9,18,0.5);}
 
 /* content */
-.content{padding:72px 28px 28px 28px; text-align:center}
-.name{margin:0;font-size:20px; font-weight:700; letter-spacing:0.2px}
-.subtitle{margin:6px 0 18px 0; color:var(--muted); font-size:13px}
+.content{padding:80px 28px 28px 28px; text-align:center}
+.name{margin:0;font-size:24px; font-weight:700; letter-spacing:0.2px}
+.subtitle{margin:6px 0 25px 0; color:var(--muted); font-size:13px}
 
 /* list */
 .list{display:flex; flex-direction:column; gap:12px; margin-top:6px}
@@ -91,7 +91,7 @@ body{
 .btn-copy:hover{color:#fff}
 
 /* hint text */
-.hint{margin-top:14px; color:var(--muted); font-size:13px}
+.hint{margin-top:10px; color:var(--muted); font-size:13px}
 
 /* toast */
 .toast{
