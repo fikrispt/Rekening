@@ -1,0 +1,60 @@
+<!-- simpan sebagai rekening.html dan buka di browser -->
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rekening — Fixs</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0;background:#fff;color:#111;display:flex;align-items:center;justify-content:center;min-height:100vh}
+    .card{width:320px;padding:28px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.06);text-align:center}
+    h1{font-size:18px;margin:0 0 14px}
+    p.sub{color:#666;margin:0 0 18px;font-size:13px}
+    .btn{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-radius:10px;border:1px solid #eee;margin-bottom:10px;cursor:pointer;background:#fafafa}
+    .btn:hover{box-shadow:0 2px 8px rgba(0,0,0,0.04)}
+    .bank{font-weight:600}
+    .small{font-size:13px;color:#666}
+    .copied{font-size:12px;color:green;margin-top:8px;display:none}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Transfer / Salin Rekening</h1>
+    <p class="sub">Pilih bank, tap untuk menyalin nomor rekening.</p>
+
+    <div class="btn" data-acc="BCA • 1234567890">
+      <div>
+        <div class="bank">BCA</div>
+        <div class="small">Nama: Ryce — 1234</div>
+      </div>
+      <div>Salin</div>
+    </div>
+
+    <div class="btn" data-acc="BNI • 0987654321">
+      <div>
+        <div class="bank">BNI</div>
+        <div class="small">Nama: Ryce — 4321</div>
+      </div>
+      <div>Salin</div>
+    </div>
+
+    <div id="copied" class="copied">Nomor tersalin ke clipboard ✅</div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.btn').forEach(btn=>{
+      btn.addEventListener('click', async ()=>{
+        try{
+          const text = btn.getAttribute('data-acc');
+          await navigator.clipboard.writeText(text);
+          const el = document.getElementById('copied');
+          el.style.display = 'block';
+          setTimeout(()=>el.style.display='none',1600);
+        }catch(e){
+          alert('Clipboard tidak tersedia — coba manual: ' + btn.getAttribute('data-acc'));
+        }
+      });
+    });
+  </script>
+</body>
+</html>
