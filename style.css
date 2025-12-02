@@ -41,7 +41,7 @@ body{
 }
 
 /* cover */
-.cover{height:120px; background:linear-gradient(90deg,#071224,#07233a); position:relative}
+.cover{height:160px; background:linear-gradient(90deg,#071224,#07233a); position:relative}
 .cover-img{width:100%; height:100%; object-fit:cover; display:block; filter:brightness(.65) contrast(1.05) saturate(.9)}
 
 /* profile circle */
