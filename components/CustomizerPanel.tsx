@@ -1,0 +1,1 @@
+// This file is intentionally left blank as the customizer functionality has been removed.
